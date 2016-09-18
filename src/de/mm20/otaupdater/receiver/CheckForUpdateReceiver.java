@@ -91,6 +91,9 @@ public class CheckForUpdateReceiver extends BroadcastReceiver {
                         File file = new File(Environment.getExternalStorageDirectory() +
                                 "/cmupdater/" + fileName);
                         if (file.exists()) file.delete();
+                        File md5File = new File(Environment.getExternalStorageDirectory() +
+                                "/cmupdater/" + fileName + ".md5sum");
+                        if (md5File.exists()) md5File.delete();
                     }
                     if (UpdaterUtils.isUpdateNew(buildDate, patchLevel, device)) numNewUpdates++;
                 }
