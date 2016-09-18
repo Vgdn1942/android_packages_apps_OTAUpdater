@@ -54,6 +54,8 @@ Each update JSON object has to have the following attributes:
 
 `changelog`: a JSON Array of strings containing all the changelog entries shown in the updater app
 
+The JSON file can either be created by hand or by using the json_generator.sh script.
+
 ### Releasing an full update
 To release a full build (which contains the entire system) upload your build file to a public server where it can be accessed per direct link (so without clicking a download button or something like this) and add a new JSON element to your JSON as described above.
 
