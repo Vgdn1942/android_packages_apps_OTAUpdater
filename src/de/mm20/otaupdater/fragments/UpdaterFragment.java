@@ -31,6 +31,9 @@ import android.preference.PreferenceFragment;
 import android.preference.PreferenceManager;
 import android.text.format.DateFormat;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -73,9 +76,31 @@ public class UpdaterFragment extends PreferenceFragment
         PreferenceManager.getDefaultSharedPreferences(getContext())
                 .registerOnSharedPreferenceChangeListener(this);
         setupPreferenceViews();
+        setHasOptionsMenu(UpdaterUtils.showAdvancedSettings(getContext()));
     }
 
-    private void setupPreferenceViews(){
+    @Override
+    public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
+        super.onCreateOptionsMenu(menu, inflater);
+        inflater.inflate(R.menu.menu_updater_fragment, menu);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.menu_advanced:
+                getActivity()
+                        .getFragmentManager()
+                        .beginTransaction()
+                        .replace(android.R.id.content, new AdvancedFragment())
+                        .addToBackStack(null)
+                        .commit();
+                return true;
+        }
+        return false;
+    }
+
+    private void setupPreferenceViews() {
         long lastCheckedTime = PreferenceManager.getDefaultSharedPreferences(getActivity())
                 .getLong("updates_last_checked", -1);
         String lastChecked = getString(R.string.last_checked) + " ";
@@ -106,7 +131,6 @@ public class UpdaterFragment extends PreferenceFragment
             Log.e(TAG, Log.getStackTraceString(e));
         }
     }
-    
 
 
     @Override
