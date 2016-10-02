@@ -83,7 +83,6 @@ public class InstallationScriptProcessor {
                 return "install /cache/recovery/" + filename + "\n";
             case 'w':
                 if (arg.equals("data") || arg.equals("cache")) return "wipe " + arg + "\n";
-                if (arg.equals("system")) return "cmd rm -rf /system/*\n";
                 Log.w(TAG, "Unknown partition to wipe: " + arg);
                 break;
             case 'b':

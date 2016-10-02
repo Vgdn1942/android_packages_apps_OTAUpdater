@@ -143,16 +143,12 @@ public class AdvancedFragment extends PreferenceFragment implements Installation
                     case 0:
                         mScript.add(mScript.size() - 1, "i ");
                         break;
-                    //Wipe
-                    case 1:
-                        mScript.add(mScript.size() - 1, "w data");
-                        break;
                     //Backup
-                    case 2:
+                    case 1:
                         mScript.add(mScript.size() - 1, "b SDCB");
                         break;
                     //Command
-                    case 3:
+                    case 2:
                         mScript.add(mScript.size() - 1, "c ls");
                         break;
                 }

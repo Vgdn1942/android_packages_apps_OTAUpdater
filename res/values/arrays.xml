@@ -17,13 +17,12 @@
 
     <string-array name="add_script_item_entries" translatable="false">
         <item>@string/script_install</item>
-        <item>@string/script_wipe</item>
         <item>@string/script_backup</item>
         <item>@string/script_command</item>
     </string-array>
 
     <string-array name="dialog_wipe_items" translatable="false">
-        <item>@string/system</item>
+        <item>@string/cache</item>
         <item>@string/data</item>
     </string-array>
 

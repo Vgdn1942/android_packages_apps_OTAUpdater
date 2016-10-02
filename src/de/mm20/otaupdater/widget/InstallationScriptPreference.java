@@ -80,7 +80,6 @@ public class InstallationScriptPreference extends Preference implements View.OnC
             mUpIcon.setVisibility(View.GONE);
             mDownIcon.setVisibility(View.GONE);
             mRemoveIcon.setVisibility(View.GONE);
-            mEditIcon.setVisibility(View.GONE);
         } else if (mIndex == mItemCount - 2) {
             mDownIcon.setVisibility(View.GONE);
         }
@@ -132,7 +131,7 @@ public class InstallationScriptPreference extends Preference implements View.OnC
                 builder.setItems(R.array.dialog_wipe_items, new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
-                        mCommand = "w " + (i == 0 ? "system" : "data");
+                        mCommand = "w " + (i == 0 ? "cache" : "data");
                         setSummary(getSummaryForCommand());
                         if (mActionListener != null) {
                             mActionListener.onCommandChange(mIndex);

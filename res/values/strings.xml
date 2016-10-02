@@ -47,9 +47,9 @@
     <string name="script_update_file">Update file</string>
     <string name="system">/system</string>
     <string name="data">/data</string>
+    <string name="cache">/cache</string>
     <string name="script_backup_system">/system</string>
     <string name="script_backup_data">/data</string>
-    <string name="script_backup_cache">/cache</string>
     <string name="script_backup_boot">/boot</string>
     <string name="script_backup_skip_md5">Skip MD5</string>
     <string name="script_backup_compress">Compress</string>
