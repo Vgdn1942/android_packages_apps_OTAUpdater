@@ -1,5 +1,5 @@
 # Copyright 2007-2011 The Android Open Source Project
-
+ifeq ($(strip $(OTAUPDATER_SUPPORT)), yes)
 LOCAL_PATH:= $(call my-dir)
 include $(CLEAR_VARS)
 
@@ -14,9 +14,8 @@ LOCAL_PRIVILEGED_MODULE := true
 # Builds against the public SDK
 #LOCAL_SDK_VERSION := current
 
-
-
 include $(BUILD_PACKAGE)
 
 # This finds and builds the test apk as well, so a single make does both.
-include $(call all-makefiles-under,$(LOCAL_PATH))
+#include $(call all-makefiles-under,$(LOCAL_PATH))
+endif

@@ -89,10 +89,10 @@ public class CheckForUpdateReceiver extends BroadcastReceiver {
                         compatibleBuildsArray.put(jsonArray.get(i));
                     } else {
                         File file = new File(Environment.getExternalStorageDirectory() +
-                                "/cmupdater/" + fileName);
+                                "/otaupdater/" + fileName);
                         if (file.exists()) file.delete();
                         File md5File = new File(Environment.getExternalStorageDirectory() +
-                                "/cmupdater/" + fileName + ".md5sum");
+                                "/otaupdater/" + fileName + ".md5sum");
                         if (md5File.exists()) md5File.delete();
                     }
                     if (UpdaterUtils.isUpdateNew(buildDate, patchLevel, device)) numNewUpdates++;

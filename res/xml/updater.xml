@@ -1,13 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
-<PreferenceScreen
-        xmlns:android="http://schemas.android.com/apk/res/android">
-    <Preference android:key="search_updates" android:title="@string/search_updates"
-                android:defaultValue="true"/>
-    <SwitchPreference android:key="notify_update" android:title="@string/notify_update"
-            android:defaultValue="60"/>
-    <ListPreference android:key="interval" android:title="@string/update_interval"
-                    android:summary="%s" android:entries="@array/update_interval_entries"
-                    android:entryValues="@array/update_interval_values"/>
-    <PreferenceCategory android:key="updater_category" android:title="@string/updates"/>
+
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <Preference
+        android:key="search_updates"
+        android:title="@string/search_updates"
+        android:defaultValue="true"/>
+
+    <SwitchPreference
+        android:key="notify_update"
+        android:title="@string/notify_update"
+        android:defaultValue="60"/>
+
+    <ListPreference
+        android:key="interval"
+        android:title="@string/update_interval"
+        android:summary="%s"
+        android:entries="@array/update_interval_entries"
+        android:entryValues="@array/update_interval_values"/>
+
+    <PreferenceScreen
+        android:key="forum_info"
+        android:title="@string/forum_info"
+        android:summary="@string/forum_info_description">
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:data="http://4pda.ru/forum/index.php?act=findpost&amp;pid=86048787&amp;anchor=Spoil-86048787-4" />
+    </PreferenceScreen>
+
+    <PreferenceCategory
+        android:key="updater_category"
+        android:title="@string/updates"/>
 
 </PreferenceScreen>

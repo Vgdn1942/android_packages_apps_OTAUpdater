@@ -35,19 +35,4 @@
     <string name="size">Größe</string>
     <string name="full_update">Vollständiges Update</string>
     <string name="incremental_update">Inkrementelles Update</string>
-    <string name="menu_advanced">Erweitert</string>
-    <string name="installation_script">Installationsskript</string>
-    <string name="add_item">Hinzufügen…</string>
-    <string name="script_install">Install</string>
-    <string name="script_wipe">Wipe</string>
-    <string name="script_backup">Backup</string>
-    <string name="script_command">Command</string>
-    <string name="script_update_file">Update-Datei</string>
-    <string name="script_backup_system">/system</string>
-    <string name="script_backup_data">/data</string>
-    <string name="script_backup_cache">/cache</string>
-    <string name="script_backup_boot">/boot</string>
-    <string name="script_backup_skip_md5">MD5 überspringen</string>
-    <string name="script_backup_compress">Komprimieren</string>
-    <string name="up">Hoch</string>
 </resources>

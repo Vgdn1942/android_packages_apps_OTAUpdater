@@ -1,0 +1,452 @@
+[
+  {
+    "name": "s12v55_jk_3m-ota-20.11.2019",
+    "filename": "s12v55_jk_3m-ota-20.11.2019.zip",
+    "md5": "ef4ce7d92051920840a2a39d635b6eff",
+    "size": 47159585,
+    "builddate": 1574247009,
+    "releasedate": 1574250513000,
+    "device": "Blackview",
+    "url": "https://vgdn1942.ocloud.de/index.php/s/NpMlmlyfGfHmSW8/download",
+    "patchlevel": "0",
+    "changelog": [
+      "The ability to disable touch buttons with tiles in the curtain",
+      "The ability to disable the user icon in the open curtain",
+      "Change OTA server"
+    ]
+  },
+  {
+    "name": "s12v55_jk_3m-ota-18.11.2019",
+    "filename": "s12v55_jk_3m-ota-18.11.2019.zip",
+    "md5": "d6466558be7a6a6def17e9b39d137f25",
+    "size": 53718507,
+    "builddate": 1574054869,
+    "releasedate": 1574059764000,
+    "device": "Blackview",
+    "url": "https://vgdn1942.ocloud.de/index.php/s/URcN5eEWbBF7h19/download",
+    "patchlevel": "0",
+    "changelog": [
+      "Cursor control with volume buttons",
+      "Change shortcuts on the lock screen",
+      "Navbar inclusion tile",
+      "Battery statistics are displayed from 0 percent"
+    ]
+  },
+  {
+    "name": "s12v55_jk_3m-ota-15.11.2019",
+    "filename": "s12v55_jk_3m-ota-15.11.2019.zip",
+    "md5": "7801528f35bdd6f2e7e83cd41840a3cd",
+    "size": 62882524,
+    "builddate": 1573842351,
+    "releasedate": 1573846953000,
+    "device": "Blackview",
+    "url": "https://vgdn1942.ocloud.de/index.php/s/yeEF4nldO0NB4Gx/download",
+    "patchlevel": "0",
+    "changelog": [
+      "Phone number in call recording file name",
+      "Fixed night mode",
+      "Fixed screen translation",
+      "Added the ability to enable navbar",
+      "Disabled EPDG",
+      "A2DP bitrate value returned by default",
+      "In the kernel added wireguard"
+    ]
+  },
+  {
+    "name": "s12v55_jk_3m-ota-09.11.2019",
+    "filename": "s12v55_jk_3m-ota-09.11.2019.zip",
+    "md5": "c72e18a21a09b61da9e648069f08c8d8",
+    "size": 62760023,
+    "builddate": 1573274462,
+    "releasedate": 1573328263000,
+    "device": "Blackview",
+    "url": "https://vgdn1942.ocloud.de/index.php/s/WWgHymjg22Y4gmC/download",
+    "patchlevel": "0",
+    "changelog": [
+      "Fixed functionality of physical buttons",
+      "Added aptX codec",
+      "Increased bitrate sound via bluetooth default",
+      "Added switching to an alternative SBC codec and increasing bitrate"
+    ]
+  },
+  {
+    "name": "s12v55_jk_3m-ota-30.10.2019",
+    "filename": "s12v55_jk_3m-ota-30.10.2019.zip",
+    "md5": "b1ad9239d30f4fd85ba2dbea1c2664e9",
+    "size": 59637931,
+    "builddate": 1572455597,
+    "releasedate": 1572459623000,
+    "device": "Blackview",
+    "url": "https://vgdn1942.ocloud.de/index.php/s/W1tCPacIsjxOvk0/download",
+    "patchlevel": "0",
+    "changelog": [
+      "Fixed functionality of physical buttons",
+      "Added USB Keyboard app",
+      "In the standard camera application, you can turn on the maximum brightness of the backlight"
+    ]
+  },
+  {
+    "name": "s12v55_jk_3m-ota-26.10.2019",
+    "filename": "s12v55_jk_3m-ota-26.10.2019.zip",
+    "md5": "ee795f48862f5246bf20369eb62c9be6",
+    "size": 77617473,
+    "builddate": 1572070550,
+    "releasedate": 1572076867000,
+    "device": "Blackview",
+    "url": "https://vgdn1942.ocloud.de/index.php/s/exx4sYW24KiDsN5/download",
+    "patchlevel": "0",
+    "changelog": [
+      "Missing security patches added",
+      "Physical button settings items merged",
+      "Reworked and improved functionality of physical buttons",
+      "Removed applications sending data to Chinese servers and not having source",
+      "The kernel has been updated to the latest vanilla version (3.18.140)",
+      "Added HID input devices (keyboard and mouse)",
+      "Minor bugs fixed"
+    ]
+  },
+  {
+    "name": "s12v55_jk_3m-ota-01.09.2019",
+    "filename": "s12v55_jk_3m-ota-01.09.2019.zip",
+    "md5": "3dacb8a88edcea90002a40cbb41c427f",
+    "size": 60413508,
+    "builddate": 1567350749,
+    "releasedate": 1567363684000,
+    "device": "Blackview",
+    "url": "https://vgdn1942.ocloud.de/index.php/s/Wbr8aRPDjv3cmqF/download",
+    "patchlevel": "0",
+    "changelog": [
+      "Fixed TTL fix mode by default",
+      "Fixed default delay for flashlight",
+      "Fixed closing the application by holding the back button",
+      "CPU/GPU performance control in the settings menu",
+      "Muteable camera shutter sound",
+      "Continuous shooting supplemented with 20 and 10 frames"
+    ]
+  },
+  {
+    "name": "s12v55_jk_3m-ota-26.08.2019",
+    "filename": "s12v55_jk_3m-ota-26.08.2019.zip",
+    "md5": "8ea7a325fcf8956d370276e6b402553f",
+    "size": 73070605,
+    "builddate": 1566839288,
+    "releasedate": 1566848948000,
+    "device": "Blackview",
+    "url": "https://vgdn1942.ocloud.de/index.php/s/rhND2OtroJw5i9d/download",
+    "patchlevel": "0",
+    "changelog": [
+      "TTL fixation value selection",
+      "Updated dark theme and expanded list of supported applications",
+      "Returned stock applications of the calendar, calculator, contacts and messages"
+    ]
+  },
+  {
+    "name": "s12v55_jk_3m-ota-23.08.2019",
+    "filename": "s12v55_jk_3m-ota-23.08.2019.zip",
+    "md5": "bad7640d2e5e49decd4826b00ba59df3",
+    "size": 79978375,
+    "builddate": 1566533350,
+    "releasedate": 1566537085000,
+    "device": "Blackview",
+    "url": "https://vgdn1942.ocloud.de/index.php/s/45UZN7L7VHA9djM/download",
+    "patchlevel": "0",
+    "changelog": [
+      "Added perfservice mode switch",
+      "Fixed display of the file name and icons in the System update settings item with a dark theme applied",
+      "Removed the search bar in the launcher",
+      "resolv.conf is read from the root of internal memory"
+    ]
+  },
+  {
+    "name": "s12v55_jk_3m-ota-19.08.2019",
+    "filename": "s12v55_jk_3m-ota-19.08.2019.zip",
+    "md5": "3cc433f9eb5408f0402bea92f5b207dc",
+    "size": 52775055,
+    "builddate": 1566158807,
+    "releasedate": 1566164221000,
+    "device": "Blackview",
+    "url": "https://vgdn1942.ocloud.de/index.php/s/vut37MwkKud8pii/download",
+    "patchlevel": "0",
+    "changelog": [
+      "The hosts file is read from the root of internal memory",
+      "Fixed 2G switching tile in dual SIM mode",
+      "Fixed display of Background task clear in the settings when a dark theme is applied",
+      "Disabled perfservice",
+      "TTL commit enabled by default"
+    ]
+  },
+  {
+    "name": "s12v55_jk_3m-ota-16.08.2019",
+    "filename": "s12v55_jk_3m-ota-16.08.2019.zip",
+    "md5": "7bcd1f9085d9ea1c3c6f2dd0f751d523",
+    "size": 92030620,
+    "builddate": 1565910302,
+    "releasedate": 1565932205000,
+    "device": "Blackview",
+    "url": "https://vgdn1942.ocloud.de/index.php/s/TzvdqtWHpwn9SIn/download",
+    "patchlevel": "0",
+    "changelog": [
+      "Multisim 2G only tile",
+      "The date format in the conversation recording files is returned as in stock (yyyy-MM-dd_HH.mm.ss)",
+      "Ability to disable percent icon in battery text style",
+      "Fixed battery text color when charging is less than 15 percent",
+      "Added custom hosts file with ad blocking, сspam, and more",
+      "Messages and Contacts are replaced by Google",
+      "Added dark theme"
+    ]
+  },
+  {
+    "name": "s12v55_jk_3m-ota-14.08.2019",
+    "filename": "s12v55_jk_3m-ota-14.08.2019.zip",
+    "md5": "7e1c113c7d17b516ae559ec2c26afd6d",
+    "size": 105407855,
+    "builddate": 1565729375,
+    "releasedate": 1565733239000,
+    "device": "Blackview",
+    "url": "https://vgdn1942.ocloud.de/index.php/s/gku71TfdvFnfmAi/download",
+    "patchlevel": "0",
+    "changelog": [
+      "The statusbar is fixed when the red color is off in power saving mode",
+      "Fixed change recovery function",
+      "Added tile to switch to 2G Only mode (when disable, returns the previous network type)",
+      "Added grayscale tile",
+      "Added option to delay cleaning background applications",
+      "The date format in the conversation recording files was changed and the extra digits at the end of the file were removed",
+      "An item has been added to the update menu to open the list of changes on 4pda.ru",
+      "In the phone settings, checkboxes are replaced by switches",
+      "Fixed some menu items"
+    ]
+  },
+  {
+    "name": "s12v55_jk_3m-ota-09.08.2019",
+    "filename": "s12v55_jk_3m-ota-09.08.2019.zip",
+    "md5": "e0e5a8f9b4205ffb21275fec34b00123",
+    "size": 77378252,
+    "builddate": 1565376724,
+    "releasedate": 1565380827000,
+    "device": "Blackview",
+    "url": "https://vgdn1942.ocloud.de/index.php/s/SiTX2IN6y5fkdWo/download",
+    "patchlevel": "0",
+    "changelog": [
+      "Fixed Russian translation",
+      "The ability to install OTA via TWRP",
+      "Added closing the active application by holding the Back button with the choice of holding time",
+      "Added automatic call recording"
+    ]
+  },
+  {
+    "name": "s12v55_jk_3m-ota-08.08.2019",
+    "filename": "s12v55_jk_3m-ota-08.08.2019.zip",
+    "md5": "46167173f97649b98e60f8ad8edf4bf7",
+    "size": 93582330,
+    "builddate": 1565274433,
+    "releasedate": 1565279525000,
+    "device": "Blackview",
+    "url": "https://vgdn1942.ocloud.de/index.php/s/08I0aRmXiQ1u4fB/download",
+    "patchlevel": "0",
+    "changelog": [
+      "Seven icons in a half-open curtain",
+      "Choosing the location of the clock in the status bar",
+      "Clock application returned from stock",
+      "Ability to enable/disable the red status bar in power saving mode",
+      "The ability to quickly change the recovery (stock/TWRP) from the settings"
+    ]
+  },
+  {
+    "name": "s12v55_jk_3m-ota-01.08.2019",
+    "filename": "s12v55_jk_3m-ota-01.08.2019.zip",
+    "md5": "4b39fc0abf7b944faa97a36131c05f66",
+    "size": 52203018,
+    "builddate": 1564677845,
+    "releasedate": 1564681924000,
+    "device": "Blackview",
+    "url": "https://vgdn1942.ocloud.de/index.php/s/QGKyaCXL809j4LG/download",
+    "patchlevel": "0",
+    "changelog": [
+      "Fixed increased battery consumption",
+      "Advanced PTT button selection",
+      "Protection from turning on NFC from the curtain when the screen is locked",
+      "Setting the frequency of the button backlight flashing during notifications",
+      "Button illumination notification when the battery is fully charged"
+    ]
+  },
+  {
+    "name": "s12v55_jk_3m-ota-28.07.2019",
+    "filename": "s12v55_jk_3m-ota-28.07.2019.zip",
+    "md5": "86b47548de01e6e45d57ff41323ebd39",
+    "size": 49468788,
+    "builddate": 1564292875,
+    "releasedate": 1564299025000,
+    "device": "Blackview",
+    "url": "https://vgdn1942.ocloud.de/index.php/s/winBBFZdO8s2ONY/download",
+    "patchlevel": "0",
+    "changelog": [
+      "Added battery style icon selection",
+      "Music control gestures work in most applications",
+      "The camera button works in most applications",
+      "Small fixes in the PTT button",
+      "Fixed pressing the menu button in the button test mode",
+      "Update Russian translation"
+    ]
+  },
+  {
+    "name": "s12v55_jk_3m-ota-26.07.2019",
+    "filename": "s12v55_jk_3m-ota-26.07.2019.zip",
+    "md5": "d852149a8f8ef4c14abffb4a312686b7",
+    "size": 51416738,
+    "builddate": 1564133180,
+    "releasedate": 1564142263000,
+    "device": "Blackview",
+    "url": "https://vgdn1942.ocloud.de/index.php/s/VWb7NKJSesRJUWm/download",
+    "patchlevel": "0",
+    "changelog": [
+      "Removed arrows in Wi-Fi icon in statusbar",
+      "The button Mark as read is added to the notification message",
+      "The ability to change large network type icons in the statusbar",
+      "The ability to change the launch of the assistant by swipe to the left on the lock screen, to start the Phone"
+    ]
+  },
+  {
+    "name": "s12v55_jk_3m-ota-23.07.2019",
+    "filename": "s12v55_jk_3m-ota-23.07.2019.zip",
+    "md5": "6575f649e251f6114c482952f94b3dec",
+    "size": 60999890,
+    "builddate": 1563908508,
+    "releasedate": 1563913405000,
+    "device": "Blackview",
+    "url": "https://vgdn1942.ocloud.de/index.php/s/CGqvJnIAb5Xfoce/download",
+    "patchlevel": "0",
+    "changelog": [
+      "Fix TTL in kernel",
+      "Network traffic monitor",
+      "Frequency corrected, small undervolting"
+    ]
+  },
+  {
+    "name": "s12v55_jk_3m-ota-17.07.2019",
+    "filename": "s12v55_jk_3m-ota-17.07.2019.zip",
+    "md5": "c36738a536f270a225c98387540d9bcd",
+    "size": 52865798,
+    "builddate": 1563350964,
+    "releasedate": 1563358089000,
+    "device": "Blackview",
+    "url": "https://vgdn1942.ocloud.de/index.php/s/zH2nJMCxGf6nonV/download",
+    "patchlevel": "0",
+    "changelog": [
+      "Added tile on/off blue protection mode",
+      "Added tile enable/disable processor information",
+      "Changed the algorithm for holding the PTT button for on/off flashlight",
+      "Variable number of tiles in the quick settings"
+    ]
+  },
+  {
+    "name": "s12v55_jk_3m-ota-11.07.2019",
+    "filename": "s12v55_jk_3m-ota-11.07.2019.zip",
+    "md5": "a4e33e7f70152e997870012221c12a96",
+    "size": 62497533,
+    "builddate": 1562867551,
+    "releasedate": 1562873236000,
+    "device": "Blackview",
+    "url": "https://vgdn1942.ocloud.de/index.php/s/6M4X8V6EJ17JaeP/download",
+    "patchlevel": "0",
+    "changelog": [
+      "Display bluetooth battery status when available in statusbar and QS Tile",
+      "Add ToolBox instead Compass",
+      "Add Cpu overlay",
+      "Set default governor to conservative instead interactive"
+    ]
+  },
+  {
+    "name": "s12v55_jk_3m-ota-04.07.2019",
+    "filename": "s12v55_jk_3m-ota-04.07.2019.zip",
+    "md5": "af39792d91743ead1896d5929a1457fe",
+    "size": 57264442,
+    "builddate": 1562235668,
+    "releasedate": 1562242151000,
+    "device": "Blackview",
+    "url": "https://vgdn1942.ocloud.de/index.php/s/DF3HCQQczbJJffy/download",
+    "patchlevel": "0",
+    "changelog": [
+      "Added adjust the overall strength of vibration",
+      "Added disabled full screen InCallUI",
+      "Disable VILTE",
+      "Video quality format WxH",
+      "Video photo filename format dd.MM.yyyy_HH-mm-ss",
+      "Icon H+ in statusbar"
+    ]
+  },
+  {
+    "name": "s12v55_jk_3m-ota-24.06.2019",
+    "filename": "s12v55_jk_3m-ota-24.06.2019.zip",
+    "md5": "4c826ebf6e719e294f0f811fb454a945",
+    "size": 48352565,
+    "builddate": 1561358158,
+    "releasedate": 1561367387000,
+    "device": "Blackview",
+    "url": "https://vgdn1942.ocloud.de/index.php/s/KC8NcEgPRiYMf0L/download",
+    "patchlevel": "0",
+    "changelog": [
+      "Fixing autorotation when off from the QS tile",
+      "Correction of the non-inclusion of the button illumination when pressing the app switch button",
+      "Notification backlight buttons"
+    ]
+  },
+  {
+    "name": "s12v55_jk_3m-ota-21.06.2019",
+    "filename": "s12v55_jk_3m-ota-21.06.2019.zip",
+    "md5": "55f4f03690f597ac61402b5760cbe6c8",
+    "size": 176024213,
+    "builddate": 1561112467,
+    "releasedate": 1561116079000,
+    "device": "Blackview",
+    "url": "https://vgdn1942.ocloud.de/index.php/s/ei0dGLOUIm3SlhH/download",
+    "patchlevel": "0",
+    "changelog": [
+      "Fixed actions to the PTT button",
+      "Added actions for torch in screen on",
+      "Fixed Voice Match in Google app",
+      "Gesture V replace torch",
+      "Configure dalvik in build.prop",
+      "Fixed Marathon mode in Battery Saver",
+      "Fixed Russian translate",
+      "Added vibrate for screen gesture",
+      "Added Rotation modes",
+      "Added button backlight settings",
+      "Added disabled dialog on battery full"
+    ]
+  },
+  {
+    "name": "s12v55_jk_3m-ota-19.06.2019",
+    "filename": "s12v55_jk_3m-ota-19.06.2019.zip",
+    "md5": "abbcee8bf249faba9fe34072a7917307",
+    "size": 46198454,
+    "builddate": 1560894770,
+    "releasedate": 1560899576000,
+    "device": "Blackview",
+    "url": "https://vgdn1942.ocloud.de/index.php/s/LffCeBghiY6JENb/download",
+    "patchlevel": "0",
+    "changelog": [
+      "Fixed Power Saving Mode/Battery Profiles",
+      "Added more actions to the PTT button"
+    ]
+  },
+  {
+    "name": "s12v55_jk_3m-ota-15.06.2019",
+    "filename": "s12v55_jk_3m-ota-15.06.2019.zip",
+    "md5": "61eb5ca738881de17e99b56025a849a7",
+    "size": 54957339,
+    "builddate": 1560619416,
+    "releasedate": 1560623458000,
+    "device": "Blackview",
+    "url": "https://vgdn1942.ocloud.de/index.php/s/O58WWebrPSgngOm/download",
+    "patchlevel": "0",
+    "changelog": [
+      "Fix potentials memory leakages",
+      "Added advanced selection of network type",
+      "Units hPa (hPa/mbar) added to Compass",
+      "Removed background file in Camera weighing almost 4mb",
+      "Added icon to switch auto brightness in status bar",
+      "Minor fix for LTE network level display in status bar"
+    ]
+  }
+]

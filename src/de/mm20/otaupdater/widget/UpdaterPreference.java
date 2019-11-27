@@ -209,6 +209,22 @@ public class UpdaterPreference extends Preference implements View.OnClickListene
         if (isUpdateDownloaded()) {
             mIcon.setImageDrawable(mContext.getDrawable(R.drawable.ic_system_update));
             mState = STATE_INSTALL;
+/*
+            if (download&install) {
+                int date = mJsonObject.optInt("date", 0);
+                int patchLevel = mJsonObject.optInt("patchlevel", 0);
+                String device = mJsonObject.optString("device", "generic");
+                String md5 = mJsonObject.optString("md5", "00000000000000000000000000000000");
+                String uri = mJsonObject.optString("url", "");
+                String fileName = mJsonObject.optString("filename", "");
+
+                Intent installIntent = new Intent(mContext, InstallUpdateActivity.class);
+                installIntent.putExtra("file_name", fileName);
+                installIntent.putExtra("installed_deprecated",
+                        UpdaterUtils.isBuildInstalled(date, patchLevel, device) ? 0 : 1);
+                mContext.startActivity(installIntent);
+            }
+*/
         } else {
             mIcon.setImageDrawable(mContext.getDrawable(R.drawable.ic_download));
             mState = STATE_DOWNLOAD;
@@ -217,7 +233,7 @@ public class UpdaterPreference extends Preference implements View.OnClickListene
 
     private boolean isUpdateDownloaded() {
         String fileName = mJsonObject.optString("filename");
-        File file = new File(Environment.getExternalStorageDirectory() + "/cmupdater/" + fileName);
+        File file = new File(Environment.getExternalStorageDirectory() + "/otaupdater/" + fileName);
         return file.exists();
     }
 

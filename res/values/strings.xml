@@ -1,6 +1,6 @@
 <resources>
     <!-- [DO NOT TRANSLATE] The URL where the update json file is located TODO: replace with your own URL -->
-    <string name="builds_list_uri" translatable="false">https://raw.githubusercontent.com/MaxMustermann2-0/android_otaupdates/APIv2.1/cm-13_0.json</string>
+    <string name="builds_list_uri" translatable="false">https://raw.githubusercontent.com/Vgdn1942/ota/alps-7.0/api.json</string>
     <string name="app_name">System updates</string>
     <string name="fetch_failed">Failed to fetch builds. Please check your network connection.</string>
     <string name="updates">Updates</string>
@@ -37,21 +37,6 @@
     <string name="size">Size</string>
     <string name="full_update">Full update</string>
     <string name="incremental_update">Incremental update</string>
-    <string name="menu_advanced">Advanced</string>
-    <string name="installation_script">Installation script</string>
-    <string name="add_item">Add…</string>
-    <string name="script_install">Install</string>
-    <string name="script_wipe">Wipe</string>
-    <string name="script_backup">Backup</string>
-    <string name="script_command">Command</string>
-    <string name="script_update_file">Update file</string>
-    <string name="system">/system</string>
-    <string name="data">/data</string>
-    <string name="cache">/cache</string>
-    <string name="script_backup_system">/system</string>
-    <string name="script_backup_data">/data</string>
-    <string name="script_backup_boot">/boot</string>
-    <string name="script_backup_skip_md5">Skip MD5</string>
-    <string name="script_backup_compress">Compress</string>
-    <string name="up">Up</string>
+	<string name="forum_info">Changelog on forum</string>
+	<string name="forum_info_description">Open changelog on 4pda.ru forum</string>
 </resources>

@@ -28,16 +28,5 @@ public class UpdaterActivity extends Activity {
         super.onCreate(savedInstanceState);
         getFragmentManager().beginTransaction().replace(android.R.id.content, new UpdaterFragment())
                 .commit();
-        getActionBar().setDisplayHomeAsUpEnabled(true);
-    }
-
-    @Override
-    public boolean onNavigateUp() {
-        if (getFragmentManager().getBackStackEntryCount() > 0) {
-            getFragmentManager().popBackStack();
-        } else {
-            finish();
-        }
-        return true;
     }
 }

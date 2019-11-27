@@ -28,7 +28,7 @@ public class BootReceiver extends BroadcastReceiver {
     @Override
     public void onReceive(Context context, Intent intent) {
         File file = new File(Environment.getExternalStorageDirectory() +
-                "/cmupdater/cm-download.part");
+                "/otaupdater/download.part");
         //Assuming there is no download currently running when this is called, delete download file,
         //if the previous download failed.
         if (file.exists()) file.delete();

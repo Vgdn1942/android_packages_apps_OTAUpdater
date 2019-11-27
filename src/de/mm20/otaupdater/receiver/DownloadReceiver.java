@@ -94,7 +94,7 @@ public class DownloadReceiver extends BroadcastReceiver {
             int count;
             try {
                 new File(Environment
-                        .getExternalStorageDirectory() + "/cmupdater").mkdirs();
+                        .getExternalStorageDirectory() + "/otaupdater").mkdirs();
                 URL url = new URL(params[0]);
                 HttpURLConnection connection = (HttpURLConnection) url.openConnection();
                 while (connection.getResponseCode() == 301) {
@@ -106,7 +106,7 @@ public class DownloadReceiver extends BroadcastReceiver {
                 publishProgress(0);
                 InputStream input = new BufferedInputStream(url.openStream(), 8192);
                 OutputStream output = new FileOutputStream(Environment
-                        .getExternalStorageDirectory() + "/cmupdater/cm-download.part");
+                        .getExternalStorageDirectory() + "/otaupdater/download.part");
                 byte data[] = new byte[1 << 20];
                 long total = 0;
                 int percentProgress = 0;
@@ -132,18 +132,18 @@ public class DownloadReceiver extends BroadcastReceiver {
 
                 if (abortDownload || !mMd5.equals(MD5.getMd5(
                         Environment.getExternalStorageDirectory() +
-                                "/cmupdater/cm-download.part"))) {
-                    File file = new File(Environment.getExternalStorageDirectory() + "/cmupdater/" +
-                            "cm-download.part");
+                                "/otaupdater/download.part"))) {
+                    File file = new File(Environment.getExternalStorageDirectory() + "/otaupdater/" +
+                            "download.part");
                     file.delete();
                     return false;
                 } else {
-                    File file = new File(Environment.getExternalStorageDirectory() + "/cmupdater/" +
-                            "cm-download.part");
-                    file.renameTo(new File(Environment.getExternalStorageDirectory() + "/cmupdater/"
+                    File file = new File(Environment.getExternalStorageDirectory() + "/otaupdater/" +
+                            "download.part");
+                    file.renameTo(new File(Environment.getExternalStorageDirectory() + "/otaupdater/"
                             + mFileName));
                     File md5File = new File(Environment.getExternalStorageDirectory() +
-                            "/cmupdater/" + mFileName + ".md5sum");
+                            "/otaupdater/" + mFileName + ".md5sum");
                     try {
                         md5File.createNewFile();
                         FileWriter writer = new FileWriter(md5File);

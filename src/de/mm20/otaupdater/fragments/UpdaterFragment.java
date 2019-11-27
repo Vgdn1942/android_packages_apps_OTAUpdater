@@ -31,9 +31,6 @@ import android.preference.PreferenceFragment;
 import android.preference.PreferenceManager;
 import android.text.format.DateFormat;
 import android.util.Log;
-import android.view.Menu;
-import android.view.MenuInflater;
-import android.view.MenuItem;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -67,6 +64,7 @@ public class UpdaterFragment extends PreferenceFragment
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         addPreferencesFromResource(R.xml.updater);
+
         mUpdaterPreferences = new ArrayList<>();
         mUpdatesCategory = (PreferenceCategory) findPreference("updater_category");
         mInterval = (ListPreference) findPreference("interval");
@@ -76,28 +74,6 @@ public class UpdaterFragment extends PreferenceFragment
         PreferenceManager.getDefaultSharedPreferences(getContext())
                 .registerOnSharedPreferenceChangeListener(this);
         setupPreferenceViews();
-        setHasOptionsMenu(UpdaterUtils.showAdvancedSettings(getContext()));
-    }
-
-    @Override
-    public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
-        super.onCreateOptionsMenu(menu, inflater);
-        inflater.inflate(R.menu.menu_updater_fragment, menu);
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()) {
-            case R.id.menu_advanced:
-                getActivity()
-                        .getFragmentManager()
-                        .beginTransaction()
-                        .replace(android.R.id.content, new AdvancedFragment())
-                        .addToBackStack(null)
-                        .commit();
-                return true;
-        }
-        return false;
     }
 
     private void setupPreferenceViews() {
@@ -131,7 +107,6 @@ public class UpdaterFragment extends PreferenceFragment
             Log.e(TAG, Log.getStackTraceString(e));
         }
     }
-
 
     @Override
     public boolean onPreferenceClick(Preference preference) {

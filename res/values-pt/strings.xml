@@ -36,15 +36,4 @@
     <string name="size">Tamanho</string>
     <string name="full_update">Atualização completa</string>
     <string name="incremental_update">Atualização incremental</string>
-    <string name="menu_advanced">Avançado</string>
-    <string name="installation_script">Script de instalação</string>
-    <string name="add_item">Adicionar…</string>
-    <string name="script_install">Instalar</string>
-    <string name="script_wipe">Limpar</string>
-    <string name="script_backup">Backup</string>
-    <string name="script_command">Comando</string>
-    <string name="script_update_file">Arquivo de atualização</string>
-    <string name="script_backup_skip_md5">Pular MD5</string>
-    <string name="script_backup_compress">Compactar</string>
-    <string name="up">Cima</string>
 </resources>

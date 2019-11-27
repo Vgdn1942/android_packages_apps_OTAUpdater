@@ -24,18 +24,14 @@ import android.content.DialogInterface;
 import android.os.Bundle;
 import android.os.Environment;
 import android.os.PowerManager;
-import android.preference.PreferenceManager;
 import android.util.Log;
 import android.widget.Toast;
 
-import org.json.JSONArray;
-import org.json.JSONException;
-
 import java.io.DataOutputStream;
+import java.io.File;
 import java.io.IOException;
 
 import de.mm20.otaupdater.R;
-import de.mm20.otaupdater.util.InstallationScriptProcessor;
 
 public class InstallUpdateActivity extends Activity {
     private static final String TAG = "InstallUpdateActivity";
@@ -83,34 +79,46 @@ public class InstallUpdateActivity extends Activity {
         new Thread(new Runnable() {
             @Override
             public void run() {
-                String updateFile = Environment.getExternalStorageDirectory() + "/cmupdater/" +
+                String updateFile = Environment.getExternalStorageDirectory() + "/otaupdater/" +
                         fileName;
-                String openRecoveryScript = "";
                 try {
-                    JSONArray installationScript = new JSONArray(PreferenceManager
-                            .getDefaultSharedPreferences(InstallUpdateActivity.this)
-                            .getString("installation_script", "[\"i $update\", \"w cache\"]"));
-                    for (int i = 0; i < installationScript.length(); i++) {
-                        String cmd = installationScript.optString(i, "");
-                        cmd = cmd.replace("$update", updateFile);
-                        openRecoveryScript += InstallationScriptProcessor.processCommand(cmd);
+                    int attempts = 0;
+                    File file = new File("/cache/recovery/update.zip");
+                    do {
+                        attempts++;
                         Process process = Runtime.getRuntime().exec("sh");
                         DataOutputStream outputStream = new DataOutputStream(
                                 process.getOutputStream());
+                        // Copy update zip to cache partition
+                        outputStream.writeBytes("cp -f " + updateFile +
+                                " /cache/recovery/update.zip\n");
+/* for twrp */
+/*
+                        //Copy md5 sum file to cache partition
+                        outputStream.writeBytes("cp -f " + updateFile +
+                                ".md5sum /cache/recovery/update.zip.md5sum\n");
                         //Write recovery script to cache partition.
-                        outputStream.writeBytes("printf \"" + openRecoveryScript
-                                + "\" >/cache/recovery/openrecoveryscript\n");
+                        outputStream.writeBytes("printf \"install /cache/recovery/update.zip\nwipe " +
+                                "cache\nreboot\" >/cache/recovery/openrecoveryscript");
+*/
+/* for stock recovery */
+                        outputStream.writeBytes("printf \"--update_package=/cache/recovery/update.zip\" >/cache/recovery/command");
                         outputStream.flush();
                         outputStream.close();
                         process.waitFor();
+                    } while (!file.exists() && attempts <= 5);
+                    if (attempts > 5) {
+                        runOnUiThread(failedToast);
+                        finish();
+                        return;
                     }
-
                     //Reboot to recovery
                     PowerManager powerManager = (PowerManager)
                             getSystemService(Context.POWER_SERVICE);
-                    powerManager.reboot("recovery");
-                } catch (IOException | InterruptedException | JSONException e) {
-                    Log.e(TAG, Log.getStackTraceString(e));
+                    /* powerManager.reboot("recovery"); */ /* twrp command */
+                    powerManager.reboot("recovery-update"); /* stock recovery command */
+                } catch (IOException | InterruptedException e) {
+                    Log.e(TAG, e.getClass().getName() + " " + e.getMessage());
                     finish();
                 }
             }
