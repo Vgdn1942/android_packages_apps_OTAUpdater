@@ -1,5 +1,7 @@
 # Copyright 2007-2011 The Android Open Source Project
 ifeq ($(strip $(OTAUPDATER_SUPPORT)), yes)
+ifeq ($(strip $(AGOLD_BUILD_GMS)), yes)
+
 LOCAL_PATH:= $(call my-dir)
 include $(CLEAR_VARS)
 
@@ -18,4 +20,6 @@ include $(BUILD_PACKAGE)
 
 # This finds and builds the test apk as well, so a single make does both.
 #include $(call all-makefiles-under,$(LOCAL_PATH))
+
+endif
 endif
