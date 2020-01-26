@@ -16,14 +16,12 @@
 
 package de.mm20.otaupdater.fragments;
 
-import android.app.Activity;
 import android.app.AlarmManager;
 import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.os.SystemProperties;
 import android.preference.ListPreference;
 import android.preference.Preference;
 import android.preference.PreferenceCategory;
@@ -39,7 +37,6 @@ import java.util.ArrayList;
 import java.util.Date;
 
 import de.mm20.otaupdater.R;
-import de.mm20.otaupdater.util.UpdaterUtils;
 import de.mm20.otaupdater.widget.UpdaterPreference;
 
 public class UpdaterFragment extends PreferenceFragment

@@ -37,6 +37,7 @@
     <string name="size">Size</string>
     <string name="full_update">Full update</string>
     <string name="incremental_update">Incremental update</string>
-	<string name="forum_info">Changelog on forum</string>
-	<string name="forum_info_description">Open changelog on 4pda.ru forum</string>
+    <string name="forum_info">Changelog on forum</string>
+    <string name="forum_info_description">Open changelog on 4pda.ru forum</string>
+    <string name="download_and_update">Install and update</string>
 </resources>

@@ -46,29 +46,34 @@ public class InstallUpdateActivity extends Activity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        int installedDeprecated = getIntent().getIntExtra("installed_deprecated", 1);
-        int msgId = R.string.confirm_install;
-        if (installedDeprecated == 0) msgId = R.string.confirm_install_installed;
-        else if (installedDeprecated == -1) msgId = R.string.confirm_install_deprecated;
-        builder.setMessage(msgId)
-                .setTitle(R.string.system_update)
-                .setCancelable(false)
-                .setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        String fileName = getIntent().getStringExtra("file_name");
-                        installUpdate(fileName);
-                    }
-                })
-                .setNegativeButton(android.R.string.cancel, new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        dialog.dismiss();
-                        finish();
-                    }
-                }).create().show();
-
+        int downloadAndInstall = getIntent().getIntExtra("download_and_update", 0);
+        if (downloadAndInstall == 1) {
+            String fileName = getIntent().getStringExtra("file_name");
+            installUpdate(fileName);
+        } else {
+            AlertDialog.Builder builder = new AlertDialog.Builder(this);
+            int installedDeprecated = getIntent().getIntExtra("installed_deprecated", 1);
+            int msgId = R.string.confirm_install;
+            if (installedDeprecated == 0) msgId = R.string.confirm_install_installed;
+            else if (installedDeprecated == -1) msgId = R.string.confirm_install_deprecated;
+            builder.setMessage(msgId)
+                    .setTitle(R.string.system_update)
+                    .setCancelable(false)
+                    .setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                            String fileName = getIntent().getStringExtra("file_name");
+                            installUpdate(fileName);
+                        }
+                    })
+                    .setNegativeButton(android.R.string.cancel, new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                            dialog.dismiss();
+                            finish();
+                        }
+                    }).create().show();
+        }
     }
 
     private void installUpdate(final String fileName) {
@@ -92,16 +97,10 @@ public class InstallUpdateActivity extends Activity {
                         // Copy update zip to cache partition
                         outputStream.writeBytes("cp -f " + updateFile +
                                 " /cache/recovery/update.zip\n");
-/* for twrp */
-/*
-                        //Copy md5 sum file to cache partition
+                        // Copy md5 sum file to cache partition
                         outputStream.writeBytes("cp -f " + updateFile +
                                 ".md5sum /cache/recovery/update.zip.md5sum\n");
-                        //Write recovery script to cache partition.
-                        outputStream.writeBytes("printf \"install /cache/recovery/update.zip\nwipe " +
-                                "cache\nreboot\" >/cache/recovery/openrecoveryscript");
-*/
-/* for stock recovery */
+                        // Write recovery script to cache partition.
                         outputStream.writeBytes("printf \"--update_package=/cache/recovery/update.zip\" >/cache/recovery/command");
                         outputStream.flush();
                         outputStream.close();
@@ -112,11 +111,10 @@ public class InstallUpdateActivity extends Activity {
                         finish();
                         return;
                     }
-                    //Reboot to recovery
+                    // Reboot to recovery
                     PowerManager powerManager = (PowerManager)
                             getSystemService(Context.POWER_SERVICE);
-                    /* powerManager.reboot("recovery"); */ /* twrp command */
-                    powerManager.reboot("recovery-update"); /* stock recovery command */
+                    powerManager.reboot("recovery-update");
                 } catch (IOException | InterruptedException e) {
                     Log.e(TAG, e.getClass().getName() + " " + e.getMessage());
                     finish();

@@ -25,12 +25,8 @@ import android.os.Environment;
 import android.preference.Preference;
 import android.preference.PreferenceManager;
 import android.text.Html;
-import android.text.SpannableString;
-import android.text.TextUtils;
-import android.text.style.BulletSpan;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.widget.ArrayAdapter;
 import android.widget.ImageButton;
 import android.widget.ProgressBar;
 import android.widget.TextView;
@@ -41,7 +37,6 @@ import org.json.JSONObject;
 import java.io.File;
 import java.text.DateFormat;
 import java.util.Calendar;
-import java.util.Date;
 
 import de.mm20.otaupdater.R;
 import de.mm20.otaupdater.activities.InstallUpdateActivity;
@@ -179,6 +174,7 @@ public class UpdaterPreference extends Preference implements View.OnClickListene
                     break;
                 case STATE_INSTALL:
                     Intent installIntent = new Intent(mContext, InstallUpdateActivity.class);
+                    installIntent.putExtra("download_and_update", 0);
                     installIntent.putExtra("file_name", fileName);
                     installIntent.putExtra("installed_deprecated",
                             UpdaterUtils.isBuildInstalled(date, patchLevel, device) ? 0 : 1);
@@ -209,26 +205,29 @@ public class UpdaterPreference extends Preference implements View.OnClickListene
         if (isUpdateDownloaded()) {
             mIcon.setImageDrawable(mContext.getDrawable(R.drawable.ic_system_update));
             mState = STATE_INSTALL;
-/*
-            if (download&install) {
-                int date = mJsonObject.optInt("date", 0);
-                int patchLevel = mJsonObject.optInt("patchlevel", 0);
-                String device = mJsonObject.optString("device", "generic");
-                String md5 = mJsonObject.optString("md5", "00000000000000000000000000000000");
-                String uri = mJsonObject.optString("url", "");
-                String fileName = mJsonObject.optString("filename", "");
-
-                Intent installIntent = new Intent(mContext, InstallUpdateActivity.class);
-                installIntent.putExtra("file_name", fileName);
-                installIntent.putExtra("installed_deprecated",
-                        UpdaterUtils.isBuildInstalled(date, patchLevel, device) ? 0 : 1);
-                mContext.startActivity(installIntent);
+            boolean download_and_install = PreferenceManager.getDefaultSharedPreferences(mContext)
+                    .getBoolean("download_and_update_key", false);
+            if (download_and_install) {
+                downloadAndInstall();
             }
-*/
         } else {
             mIcon.setImageDrawable(mContext.getDrawable(R.drawable.ic_download));
             mState = STATE_DOWNLOAD;
         }
+    }
+
+    private void downloadAndInstall() {
+        int date = mJsonObject.optInt("date", 0);
+        int patchLevel = mJsonObject.optInt("patchlevel", 0);
+        String device = mJsonObject.optString("device", "generic");
+        String fileName = mJsonObject.optString("filename", "");
+
+        Intent installIntent = new Intent(mContext, InstallUpdateActivity.class);
+        installIntent.putExtra("download_and_update", 1);
+        installIntent.putExtra("file_name", fileName);
+        installIntent.putExtra("installed_deprecated",
+                UpdaterUtils.isBuildInstalled(date, patchLevel, device) ? 0 : 1);
+        mContext.startActivity(installIntent);
     }
 
     private boolean isUpdateDownloaded() {

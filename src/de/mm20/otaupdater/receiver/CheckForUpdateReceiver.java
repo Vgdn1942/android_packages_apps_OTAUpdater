@@ -27,7 +27,6 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Environment;
-import android.os.SystemProperties;
 import android.preference.PreferenceManager;
 import android.util.Log;
 
@@ -37,7 +36,6 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
-import java.util.ArrayList;
 
 import de.mm20.otaupdater.R;
 import de.mm20.otaupdater.util.UpdaterUtils;
@@ -46,7 +44,6 @@ public class CheckForUpdateReceiver extends BroadcastReceiver {
 
     private static final String TAG = "CheckForUpdateReceiver";
     private String mBuildsListUri;
-    private String mDevice;
     private Context mContext;
 
     @Override
@@ -55,7 +52,6 @@ public class CheckForUpdateReceiver extends BroadcastReceiver {
         mBuildsListUri = mContext.getString(R.string.builds_list_uri);
         new FetchBuildsAsyncTask().execute("");
     }
-
 
     class FetchBuildsAsyncTask extends AsyncTask<String, Integer, Integer> {
 
